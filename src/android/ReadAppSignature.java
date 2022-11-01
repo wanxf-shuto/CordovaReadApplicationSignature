@@ -67,8 +67,6 @@ public class ReadAppSignature extends CordovaPlugin {
             digest = MessageDigest.getInstance("SHA1");
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
-        } catch (NoSuchProviderException e) {
-            e.printStackTrace();
         }
         digest.update(sig);
         byte[] hashtext = digest.digest();
